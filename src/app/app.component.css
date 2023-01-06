@@ -1,0 +1,29 @@
+p {
+    font-family: Lato;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .blue {
+    color: blue;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  .app-component{
+    text-align: center;
+    border-style: solid;
+    border-color: aqua;
+    padding: 5px
+  }
+  
+  footer{
+    text-align: center;
+    border-style: solid;
+    border-color: brown;
+    padding: 5px
+  }
