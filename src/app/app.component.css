@@ -1,5 +1,6 @@
 p {
     font-family: Lato;
+    font-size: 20px;
   }
   
   .red {
@@ -25,5 +26,6 @@ p {
     text-align: center;
     border-style: solid;
     border-color: brown;
-    padding: 5px
+    padding: 5px;
+    font-size: 30px;
   }

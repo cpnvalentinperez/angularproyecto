@@ -1,0 +1,38 @@
+p {
+    font-family: Lato;
+    font-size: 20px;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .blue {
+    color: blue;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  .app-component{
+    text-align: center;
+    border-style: solid;
+    border-color: aqua;
+    padding: 5px
+  }
+
+   
+  .component{
+    text-align: center;
+    border-style:solid;
+    border-color: rgb(15, 230, 158);
+    padding: 10px
+  }
+  
+  footer{
+    text-align: center;
+    border-style: solid;
+    border-color: brown;
+    padding: 5px
+  }
