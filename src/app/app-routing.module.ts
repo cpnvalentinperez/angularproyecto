@@ -7,10 +7,10 @@ import { ServiciosComponent } from './servicios/servicios.component'
 import { ErrorComponent } from './error404/error.component';
 
 const routes: Routes = [
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
   {path: 'servicios', component: ServiciosComponent},
   {path: 'login', component: LoginComponent},
-  {path: '', redirectTo: '/login', pathMatch: 'full'},
-  {path: 'mi-perfil', component: PerfilComponent},
+  {path: 'perfil', component: PerfilComponent},
   {path: 'acerca', component: AcercaComponent},
   {path: '**', component: ErrorComponent}    
 ];

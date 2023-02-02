@@ -4,9 +4,12 @@
 </p>
 <ul>
   
-  <li><a routerLink="/login">Ir a Login</a></li>
-  <li><a routerLink="/mi-perfil">Ir a perfil</a></li>
+  <li><a routerLink="/" routerLinkActive="active">Inicio</a></li>
+  <li><a routerLink="/perfil" routerLinkActive="active" *ngIf="authService.logIn">Ir a perfil</a></li>  
+  <li><a routerLink="/login" routerLinkActive="active" *ngIf="!authService.logIn">Ir a Login</a></li>
   <li><a routerLink="/acerca">Acerca De</a></li>
+  <li><a class="nav-link"  (click)="logout()" href="#" *ngIf="authService.logIn">LogouT</a></li>
+
   
 </ul>
 
