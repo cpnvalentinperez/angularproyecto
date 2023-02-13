@@ -1,1 +1,124 @@
-/* You can add global styles to this file, and also import other style files */
+.contenedor{
+    width:1250px;
+    height:100px;
+    border-radius: 32px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 32px;
+    margin-bottom: 10px;
+ }
+ 
+ .espacio{
+     padding:15px;
+ }
+ 
+ .imgperfil {
+     max-width:15%;
+     max-height: 10%;
+     float:right;
+     border-radius: 60%;
+     padding-top: 35px;
+     padding-right: 25px;
+     
+ }
+ 
+ .btn-edit{
+     position: relative;
+     height: 50%;
+ }
+ 
+ .btn-right{
+     position:absolute;
+     top: 0;
+     right: 35px;
+     
+ }
+ 
+ 
+ .parent {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .centrado {
+     display: grid;
+     place-items: center;
+ }
+ 
+ img {
+     object-fit: cover;
+     
+ }
+ 
+ .imglogo{
+     width:5%;
+     height:8%;    
+ }
+ 
+ .border{
+     border-radius:30%;
+     border: 1px solid black;
+     
+ }
+ 
+ .bordocolor {
+     border: 2px solid rgb(0, 0, 0);
+     border-radius: 32px;
+     padding-left:10px;
+     padding-bottom:10px;
+     margin-bottom: 10px;
+ }
+ 
+ .btn-outline-info{
+     
+     border: 2px solid black;
+ }
+ 
+ input#miInput{
+     position:absolute;
+     top:0px;
+     left:0px;
+     right:0px;
+     bottom:0px;
+     width:100%;
+     height:100%;
+     opacity: 0;
+ }
+ 
+ p#texto{
+     text-align: center;
+     color:white;
+ }
+ 
+ div#div_file{
+     position: relative;
+     display: inline-block;
+ }
+ 
+ div#div_file::before{
+     background-color: #17a2b8;
+     color: #ebecee;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 5px;
+     content: 'Seleccionar Foto Perfil'; /* testo por defecto */
+     position: relative;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+ }
+ 
+ div#div_file input[type="file"]{
+     opacity: 0;
+   width: 400px;
+   height: 52px;
+   display: inline-block;
+ }
+ 
+ 
+ 
+ a{
+     color:black;
+ }
