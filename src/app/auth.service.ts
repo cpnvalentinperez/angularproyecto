@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class AuthService {
   
   api = 'https://localhost:3000/api';
-  token; 
+  // token; 
   
   constructor(private http: HttpClient,private router: Router) { }
   
@@ -21,7 +21,7 @@ export class AuthService {
         //Guardamos el token en localStorage
         localStorage.setItem('auth_token', resp.token);
       })
-    );
+    // );
   }
 
   //Para cerrar sesion eliminamos el token del localStorage

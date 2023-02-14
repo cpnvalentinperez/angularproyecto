@@ -1,18 +1,18 @@
-<p class="app-component">
-  Soy AppComponent y como el router-outlet esta dentro mio, 
-  este componente no cambiará si modificas la ruta!
-</p>
+
 <ul>
   
   <li><a routerLink="/" routerLinkActive="active">Inicio</a></li>
-  <li><a routerLink="/perfil" routerLinkActive="active" *ngIf="authService.logIn">Ir a perfil</a></li>  
-  <li><a routerLink="/login" routerLinkActive="active" *ngIf="!authService.logIn">Ir a Login</a></li>
-  <li><a routerLink="/acerca">Acerca De</a></li>
-  <li><a class="nav-link"  (click)="logout()" href="#" *ngIf="authService.logIn">LogouT</a></li>
+  <li><a routerLink="/perfil" routerLinkActive="active" >Ir a perfil</a></li>  
+  <li><a routerLink="/login" routerLinkActive="active" >Ir a Login</a></li> 
+  <li><a routerLink="/acerca">Acerca De</a></li> 
+  <li><a routerLink="/" routerLinkActive="active">LogouT</a></li>
 
   
 </ul>
 
 <router-outlet></router-outlet>
 
-<footer>Este podría ser un bello Footer</footer>
+
+<!-- *ngIf="authService.logIn" perfil
+*ngIf="!authService.logIn" login
+class="nav-link" href="#" (click)="logout()" *ngIf="authService.logIn" logout -->
