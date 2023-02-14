@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule,HttpClient} from '@angular/common/http';
+import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -8,20 +8,20 @@ import { Router } from '@angular/router';
 
 export class AuthService {
   
-  api = 'https://localhost:3000/api';
-  // token; 
+  url = 'https://localhost:3000/api';
+  token; 
   
   constructor(private http: HttpClient,private router: Router) { }
   
   login(email: string, password: string) {
-    this.http.post(this.api + '/authenticate', {email: email, password: password})
+    this.http.post(this.url + '/authenticate', {email: email, password: password})
     .subscribe((resp: any) => {
     //Redireccionamos al ususario a su perfil
         this.router.navigate(['perfil']);
         //Guardamos el token en localStorage
         localStorage.setItem('auth_token', resp.token);
       })
-    // );
+     );
   }
 
   //Para cerrar sesion eliminamos el token del localStorage
