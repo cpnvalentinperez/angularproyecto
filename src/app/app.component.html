@@ -1,19 +1,19 @@
-
+<router-outlet>
 <ul>
   
   <li><a routerLink="/" routerLinkActive="active" 
     >Inicio</a></li>
+    <li><a routerLink="/login" routerLinkActive="active" 
+      >Ir a Login</a></li> 
   <li><a routerLink="/perfil" routerLinkActive="active"
-    >Ir a perfil</a></li>  
-  <li><a routerLink="/login" routerLinkActive="active" 
-    >Ir a Login</a></li> 
+    >Ir a Perfil</a></li>    
   <li><a routerLink="/acerca">Acerca De</a></li> 
   <li><a routerLink="/" routerLinkActive="active" 
-    class="nav-link" href="#" (click)="logout()" >LogouT</a></li>
+    href="#">LogouT</a></li>
   
 </ul>
 
-<router-outlet></router-outlet>
+</router-outlet>
 
 
 <!-- *ngIf="authService.logIn" perfil

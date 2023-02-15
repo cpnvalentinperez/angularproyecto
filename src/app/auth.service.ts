@@ -11,7 +11,9 @@ export class AuthService {
   url = 'https://localhost:3000/api';
   token; 
   
-  constructor(private http: HttpClient,private router: Router) { }
+  constructor(private http: HttpClient,private router: Router) {
+    this.token = localStorage.getItem('auth_token');
+   }
   
   login(email: string, password: string) {
     this.http.post(this.url + '/authenticate', {email: email, password: password})
@@ -21,7 +23,7 @@ export class AuthService {
         //Guardamos el token en localStorage
         localStorage.setItem('auth_token', resp.token);
       })
-     );
+    // );
   }
 
   //Para cerrar sesion eliminamos el token del localStorage

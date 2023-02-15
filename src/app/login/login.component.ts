@@ -9,16 +9,17 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  email = '';
-  password = '';
-  
-  constructor(private authService: AuthService) {}
+  constructor() { }
 
-  Login(){
-    //El servicio authService.login ya direccion en caso de inicio de sesion positivo
-    this.authService.login(this.email, this.password)
+  ngOnInit() {
   }
 
-  ngOnInit() { }
-
 }
+//   email = '';
+//   password = '';
+  
+//   constructor(private authService: AuthService) {}
+//   Login(){
+//     //El servicio authService.login ya direccion en caso de inicio de sesion positivo
+//     this.authService.login(this.email, this.password)
+//   }
