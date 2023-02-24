@@ -7,7 +7,7 @@ import { ServiciosComponent } from './servicios/servicios.component'
 import { ErrorComponent } from './error404/error.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
   {path: 'servicios', component: ServiciosComponent},
   {path: 'login', component: LoginComponent},
   {path: 'perfil', component: PerfilComponent},
