@@ -1,3 +1,57 @@
 <p class="component">
     Aca tenes que poner Nombre y Contraseña
   </p>
+
+  <div>
+    <div>
+      <div>
+        Usuario:
+        <input 
+          placeholder="Ingrese su Usuario" 
+          type="text" 
+          [(ngModel)]="nombre" />
+      </div>
+      <br />
+      <div>
+        Clave:
+        <input 
+          placeholder="Ingrese su Clave" 
+          type="text" 
+          [(ngModel)]="clave" />
+      </div>
+      <br />
+      <!-- <div>
+        Teléfono:
+        <input
+          placeholder="ingrese su telefono"
+          type="number"
+          [ngModel]="telefono"
+        />
+      </div>
+      <br />
+      <div>
+        DNI:
+        <input
+          placeholder="ingrese su dni"
+          type="number"
+          [ngModel]="dni"
+          (ngModelChange)="cambiaDni($event)"
+        />
+      </div>
+    </div>
+    <br /> -->
+    <div>
+      Tú nombre es: <b>{{nombre}}</b>
+      <br />
+      Tú clave es: <b>{{clave}}</b> 
+    </div>
+    <br />
+    <!-- <div>
+      Tú telefono es: <b>{{telefono}}</b> y tiene {{telefono.length}}
+      <b>digitos</b>.
+    </div>
+    <br />
+    <div>Tú dni es: <b>{{dni}}</b></div> -->
+    <br/>
+    <div class="click"  (click)="onClick()">Ingresar</div>
+  </div>
