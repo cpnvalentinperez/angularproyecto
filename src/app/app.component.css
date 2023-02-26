@@ -29,3 +29,14 @@ p {
     padding: 5px;
     font-size: 30px;
   }
+
+  p {
+    font-family: Lato;
+  }
+  .click{
+    padding:5px;
+    border-style: solid;
+    border-color: blue;
+    max-width: fit-content;
+    cursor: pointer;
+  }

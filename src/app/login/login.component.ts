@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
 import { Router, ActivatedRoute} from '@angular/router';
 import { AuthService } from '../auth.service';
+
+
 
 @Component({
   selector: 'app-login',
@@ -11,7 +13,23 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
+  
   ngOnInit() {
+  }
+
+  nombre: string = '';
+  clave: string = '';
+  // telefono = '';
+  // dni = '';
+
+  // cambiaDni(valor:any) {
+  //   // Podes consultar el valor por consola
+  //   console.log(valor);
+  //   this.dni = valor;
+  // }
+
+  onClick() {
+    alert('Ahora se tu clave!!');
   }
 
 }
