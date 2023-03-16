@@ -5,12 +5,13 @@ import { LoginComponent } from './login/login.component'
 import { PerfilComponent } from './perfil/perfil.component'
 import { ServiciosComponent } from './servicios/servicios.component'
 import { ErrorComponent } from './error404/error.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   {path: 'servicios', component: ServiciosComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'perfil', component: PerfilComponent},
+  {path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard],},
   {path: 'acerca', component: AcercaComponent},
   {path: '**', component: ErrorComponent}    
 ];

@@ -15,6 +15,7 @@ export class AuthService {
     this.token = localStorage.getItem('auth_token');
    }
   
+  
   login(email: string, password: string) {
     this.http.post(this.api + '/authenticate', {email: email, password: password}).subscribe((resp: any) => {
     //Redireccionamos al ususario a su perfil
