@@ -45,3 +45,14 @@ p {
     max-width: fit-content;
     cursor: pointer;
   }
+
+  .error{
+    color:red
+  }
+
+  label{
+    padding: 10px;    
+    font-size:20px;
+  }
+
+  

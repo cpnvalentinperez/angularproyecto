@@ -2,24 +2,44 @@
     Aca tenes que poner Nombre y Contraseña
   </p>
 
-  <div>
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
     <div>
-      <div>
-        Usuario:
-        <input 
-          placeholder="Ingrese su Usuario" 
-          type="text" 
-          [(ngModel)]="nombre" />
-      </div>
-      <br />
-      <div>
-        Clave:
-        <input 
-          placeholder="Ingrese su Clave" 
-          type="text" 
-          [(ngModel)]="clave" />
-      </div>
-      <br />
+        <label for="email" class="label">Email: </label>
+        <input type="email" formControlName="correo" placeholder="Ingrese su correo" >
+    </div>
+    <div *ngIf="Mail?.errors  && Mail?.touched">    
+      <p *ngIf="Mail?.hasError('required')" class="error">
+          El email es requerido.
+      </p>
+      <p *ngIf="Mail?.hasError('email')" class="error">
+          El formato del email debe ser válido.
+        </p>
+    </div>
+
+  <br/>
+    <div>
+      <label for="exampleInputPassword1" class="label">Clave: </label>
+      <input type="password" formControlName="clave" [class.border-danger]="MailValid" placeholder="Ingrese su clave">
+    </div>
+    <div *ngIf="Password?.errors  && Password?.touched">
+      <p *ngIf="Password?.hasError('required')" class="error">
+        El password es requerido.
+      </p>
+      <p *ngIf="Password?.errors?.['minlength']" class="error">
+        El password debe ser de 8 o más caracteres.
+      </p>
+    </div>
+
+  <br/>
+  <div>
+        <button type="submit">Inicie Sesion</button>
+  </div>  
+</form>
+
+  <!-- <div><div><div>Usuario:<input placeholder="Ingrese su Usuario" type="text" [(ngModel)]="email" />
+      </div><br />
+  <div>Clave:<input placeholder="Ingrese su Clave" type="text" [(ngModel)]="password" />
+      </div><br /> -->
       <!-- <div>
         Teléfono:
         <input
@@ -40,18 +60,18 @@
       </div>
     </div>
     <br /> -->
-    <div>
-      Tú nombre es: <b>{{nombre}}</b>
+    <!-- <div>
+      Tu Usuario es: <b>{{email}}</b>
       <br />
-      Tú clave es: <b>{{clave}}</b> 
+      Tu clave es: <b>{{password}}</b> 
     </div>
-    <br />
+    <br /> -->
     <!-- <div>
       Tú telefono es: <b>{{telefono}}</b> y tiene {{telefono.length}}
       <b>digitos</b>.
     </div>
     <br />
     <div>Tú dni es: <b>{{dni}}</b></div> -->
-    <br/>
-    <div class="click"  (click)="onClick()">Ingresar</div>
-  </div>
+    <!-- <br/>
+    <div class="click" >Ingresar</div>
+  </div> -->

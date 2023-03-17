@@ -1,6 +1,5 @@
 import { Component, OnInit, VERSION } from '@angular/core';
-import { Router, ActivatedRoute} from '@angular/router';
-import { AuthService } from '../auth.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -10,16 +9,49 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  email = '';
-   password = '';
-  
-   constructor(private authService: AuthService) {}
-   Login(){
-    //El servicio authService.login ya direccion en caso de inicio de sesion positivo
-     this.authService.login(this.email, this.password)
-   }
+  form: FormGroup;
+
+  constructor( private formBuilder: FormBuilder){
+    this.form = this.formBuilder.group({
+      clave:['',[Validators.required, Validators.minLength(8)]],
+      correo:['',[Validators.required, Validators.email]],
+    })
+  }
  
   ngOnInit() { }
+
+  get Password(){
+    return this.form.get("clave");
+  }
+ 
+  get Mail(){
+   return this.form.get("correo");
+  }
+
+  get PasswordValid(){
+    return this.Password?.touched && !this.Password?.valid;
+  }
+
+  get MailValid() {
+    return false
+  }
+  
+
+  onEnviar(event: Event){
+    // Detenemos la propagación o ejecución del compotamiento submit de un form
+    event.preventDefault; 
+ 
+    if (this.form.valid){
+      // Llamamos a nuestro servicio para enviar los datos al servidor
+      // También podríamos ejecutar alguna lógica extra
+      alert("Todo salio bien ¡Enviar formuario!")
+    }else{
+      // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
+      this.form.markAllAsTouched(); 
+    }
+ 
+  }
+
 }
   // nombre: string = '';
   // clave: string = '';
@@ -37,4 +69,11 @@ export class LoginComponent implements OnInit {
   // }
 
 
-
+  // email = '';
+  //  password = '';
+  
+  //  constructor(private authService: AuthService) {}
+  //  login(){
+  //   //El servicio authService.login ya direccion en caso de inicio de sesion positivo
+  //    this.authService.login(this.email, this.password)
+  //  }

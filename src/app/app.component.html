@@ -3,15 +3,13 @@
   
   <li><a routerLink="/" routerLinkActive="active">Inicio</a></li>
   <li><a routerLink="/login" routerLinkActive="active" *ngIf="authService.logIn">Ir a Login</a></li> 
-  <li><a routerLink="/perfil" routerLinkActive="active" *ngIf="authService.logIn">Ir a Perfil</a></li>    
+  <li><a routerLink="/perfil" routerLinkActive="active" *ngIf="!authService.logIn">Ir a Perfil</a></li>    
   <li><a routerLink="/acerca">Acerca De</a></li> 
-  <li><a class="nav-link" href="#" (click)="logout()" *ngIf="authService.logIn">LogouT</a></li>
+  <li><a class="nav-link" href="#" *ngIf="authService.logIn">Salirse</a></li>
   
 </ul>
 
 </router-outlet>
 
 
-<!-- *ngIf="authService.logIn" perfil
-*ngIf="!authService.logIn" login
-class="nav-link" href="#" (click)="logout()" *ngIf="authService.logIn" logout -->
+<!--  (click)="logout()"  -->
