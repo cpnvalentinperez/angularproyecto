@@ -21,6 +21,14 @@ export class IniciarSesionComponent implements OnInit{
         }
       )
   } 
+
+  onSubmit() {
+    if (this.form.invalid) {
+      alert("Por favor ingrese los campos requeridos.");
+      return;
+    }
+    // Si los campos están completos, realiza la acción necesaria aquí
+  }
   
   ngOnInit():void { }
 
