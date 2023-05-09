@@ -1,6 +1,6 @@
 
 <h2 class="m-5 centrado">INICIAR SESION</h2>
-<form [formGroup]="form" class="centrado">
+<form [formGroup]="form" class="centrado" (ngSubmit)="onEnviar($event)">
     <div class="mb-4" style="width: 40%">
       <label for="exampleInputEmail1" class="form-label centrado">Correo</label>
       <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

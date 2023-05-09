@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 })
 
 export class AuthService {
-  url='http://npinti.ddns.net:9008/api/auth/login';
+  url='http://inti.ddns.net:9008/api/auth/login';
   currentUserSubject: BehaviorSubject<any>;
   constructor(private http:HttpClient){
     console.log("El servicio esta corriendo normalmente");
